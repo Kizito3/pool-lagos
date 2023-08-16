@@ -1236,7 +1236,7 @@ line-height: normal;
   justify-content: flex-end;
 }
 
-.view a{
+.view1 a{
   text-decoration: none;
   color: var(--btn3);
   padding-inline: 10px;

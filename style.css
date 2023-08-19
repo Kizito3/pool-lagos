@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;500;600;700;800;900&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: 20px;
 }
 :root {
@@ -178,6 +178,10 @@ h1 {
   text-align: left;
 }
 
+.menu-item a:hover{
+  color: var(--btn3);
+}
+
 .close:hover {
   color: white;
 }
@@ -308,9 +312,12 @@ h1 {
 }
 
 .image-data h2 {
-  font-size: 55px;
-  font-weight: 600;
-  color: #fff;
+  font-size: 2.5rem;
+  color: var(--color);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
 }
 
 @media (max-width: 768px) {
@@ -458,7 +465,7 @@ a.button:hover {
   display: grid;
   gap: 50px;
   background-color: var(--gridcolor1);
-  padding: 70px;
+  padding: 50px;
 }
 
 .first-grid {
@@ -473,6 +480,12 @@ a.button:hover {
   flex-direction: column;
 }
 
+.center1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .view {
   display: flex;
   justify-content: center;
@@ -514,10 +527,19 @@ a.button:hover {
   }
 }
 
-@media (max-width: 511px) {
+@media (max-width: 768px) {
   .first-grid {
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
     gap: 15px;
+  }
+
+  .todays-game{
+    grid-template-columns: repeat(1, minmax(220px, 1fr));
+
+  }
+
+  .today-grid{
+    padding-inline: 8%;
   }
 }
 
@@ -568,6 +590,7 @@ a.button:hover {
 .disp-location {
   position: absolute;
   bottom: 0;
+  padding-inline: 10%;
   right: 0;
   left: 0;
   height: 25%; /* Initially hidden */
@@ -682,6 +705,21 @@ a {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about-space p{
+    font-size: 0.8rem;
+  }
+  .about-space img{
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-space p{
+    font-size: 0.8rem;
+  }
 }
 .learn-btn {
   border: 1px solid var(--btn3);
@@ -840,12 +878,20 @@ a {
 /* =======================================about styling====================================== */
 .about-banner {
   background: url(images/h-banner.png);
-  padding-block: 18rem;
+  margin-top: 30px;
+  padding-block: 7rem;
   background-repeat: no-repeat;
 }
+
+@media (max-width:768px) {
+  .about-banner{
+    background-size: cover;
+  }
+}
 .about-content {
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-heading h3 {
@@ -858,7 +904,7 @@ a {
   margin-bottom: 55px;
 }
 .about-section h4 {
-  margin-top: 168px;
+  margin-top: 100px;
   color: #000;
   font-size: 2rem;
   font-weight: 700;
@@ -869,6 +915,24 @@ a {
   font-size: 0.98rem;
   font-weight: 400;
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about-section p {
+    font-size: 17px;
+  }
+
+  .about-section h4 {
+    font-size: 30px;
+    margin-top: 40px;
+  }
+  .about-section img {
+    margin-top: 0;
+  }
+  .about-section{
+    margin-top: 50px;
+  }
+}
+
 
 .about-section img {
   margin-top: 90px;
@@ -974,8 +1038,25 @@ a {
 
 .connect-banner {
   background: url(images/connect1.png);
-  padding-block: 16rem;
+  padding-block: 7rem;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .connect-banner{
+    background-size: cover;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .connect-banner {
+    background-size: cover;
+  }
+
+  .about-banner {
+    background-size: cover;
+  }
 }
 
 .connect-content {
@@ -1047,6 +1128,13 @@ a {
 }
 .personal img {
   margin-top: 29px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* .about-players{
+    display: grid;
+    gap: 200px !important;
+  } */
 }
 
 .personal2 h4 {
@@ -1520,6 +1608,7 @@ a {
   place-items: center;
   padding-inline: 10% !important;
 }
+
 .t-style {
   display: grid !important;
   place-items: center !important;
@@ -1530,6 +1619,13 @@ a {
   color: var(--color);
   background-color: #166b70 !important;
   font-size: 16px;
+}
+.my-table1{
+  overflow-x: scroll !important;
+}
+
+.my-table1::-webkit-scrollbar {
+  display: none;
 }
 
 /* ====================sign up ====================================== */

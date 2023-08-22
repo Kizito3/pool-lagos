@@ -101,6 +101,7 @@ h1 {
   text-decoration: none;
   text-align: center;
   padding: 0;
+  margin-top: 4px;
 }
 .registration {
   display: flex;
@@ -298,12 +299,17 @@ h1 {
 .slide .image-data {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 26%;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  text-align: left;
   transform: translate(-50%, -50%);
-  text-align: center;
   width: 100%;
   z-index: 100;
+  width: fit-content;
 }
+
 
 .image-data p {
   font-size: 19px;
@@ -320,15 +326,74 @@ h1 {
   text-decoration-line: underline;
 }
 
+.media-home{
+  display: none !important;
+}
+.slide .image-data2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 100;
+  text-align: center;
+}
+
+
+.image-data2 p {
+  font-size: 19px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.image-data2 h2 {
+  font-size: 2.5rem;
+  color: var(--color);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+
+
+@media (max-width: 1024px) {
+  .media-home{
+    display: block !important;
+  }
+  .image2{
+    height: 100%;
+  width: 100%;
+  object-fit: cover;
+  }
+  .media1{
+    display: none !important;
+  }
+
+  .image-data2{
+    padding-inline: 5%;
+  }
+  .image-data2 h2{
+    font-size: 2rem;
+  }
+}
 @media (max-width: 768px) {
+  .slide .image-data{
+    padding-left: 30%;
+    padding-right: 0;
+  }
+  .image-data2{
+    margin-top: 30px;
+  }
   .image-data h2{
     font-size: 35px;
   }
   .image-data p{
     font-size: 15px;
   }
-  .image-data{
-    padding-inline: 1rem;
+  .image{
+    height: 100%;
+  width: 100%;
+  object-fit: cover;
   }
   .main{
     margin-top: 5px;
@@ -351,10 +416,22 @@ a.button:hover {
   color: #fff;
 }
 
+.swiper-pagination{
+  display: flex;
+  justify-content: start;
+  padding-inline: 15%;
+}
+
+@media (max-width:768px) {
+  .swiper-pagination{
+    display: flex;
+    justify-content: center;align-items: center;
+  }
+}
 .swiper-pagination-bullet {
   opacity: 1;
-  height: 12px;
-  width: 12px;
+  height: 17px !important;
+  width: 17px !important;
   background-color: var(--btn3) !important;
 }
 
@@ -452,6 +529,12 @@ a.button:hover {
   line-height: normal;
   text-decoration-line: underline;
   padding-block: 5rem;
+}
+
+@media (max-width:768px) {
+  .today-heading h4{
+    font-size: 1.5rem;
+  }
 }
 
 .todays-game {
@@ -560,6 +643,13 @@ a.button:hover {
   text-decoration-line: underline;
 }
 
+@media (max-width: 768px) {
+  .near h4{
+    font-size: 1.3rem;
+    margin-bottom: 19px;
+  }
+}
+
 .location {
   display: grid;
   grid-template-columns: repeat(5, 400px);
@@ -646,6 +736,11 @@ a.button:hover {
   text-decoration-line: underline;
 }
 
+@media (max-width: 768px) {
+  .player h4{
+    font-size: 1.3rem;
+  }
+}
 .players-grid {
   display: grid;
   place-items: center;
@@ -699,6 +794,13 @@ a {
   line-height: normal;
   text-decoration-line: underline;
 }
+
+@media (max-width: 768px) {
+  .about-space h4{
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+}
 .about-space p {
   color: #fff;
   font-size: 1rem;
@@ -750,7 +852,12 @@ a {
   line-height: normal;
   text-decoration-line: underline;
 }
-
+@media (max-width: 768px) {
+  .highlights h4{
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+}
 .highlights-grid {
   display: grid;
   justify-items: center; /* Center items horizontally within their grid cell */
@@ -838,6 +945,12 @@ a {
   font-weight: 700;
   line-height: normal;
   text-decoration-line: underline;
+}
+
+@media (max-width: 768px) {
+  .comp-header h1{
+    font-size: 1.3rem;
+  }
 }
 .comp-items {
   display: grid;
@@ -1013,6 +1126,12 @@ a {
   margin-bottom: 1.5rem;
 }
 
+@media (max-width: 768px) {
+  .choose-heading h3{
+    font-size: 1.3rem;
+  }
+}
+
 .choose-details p {
   display: flex;
   justify-content: center;
@@ -1069,6 +1188,8 @@ a {
   font-size: 2rem;
   font-weight: 700;
 }
+
+
 .connect h3 {
   display: grid;
   place-items: center;
@@ -1080,6 +1201,14 @@ a {
   margin-top: 6.1rem;
 }
 
+
+@media (max-width: 768px) {
+  .connect h3{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+}
+
 /* ===============================details style================================ */
 
 .about-players {
@@ -1087,8 +1216,46 @@ a {
   background: var(--details);
 }
 
+.details-players{
+  display: flex;
+  gap: 30px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+  .about-players{
+    padding-top: 40px;
+  }
+}
+
+
+@media (min-width: 810px) and (max-width: 1180px){
+    .details-players{
+      flex-direction: column;
+    }
+
+    .personal{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .personal2 h4{
+      margin: 0 !important;
+    }
+    
+}
+
+@media (max-width: 768px) {
+  .details-players{
+    flex-direction: column;
+    gap: 0;
+    padding-inline: 20px;
+  }
+}
+
 .personal h4 {
-  text-align: center;
+  /* text-align: center; */
   color: #fff;
   font-size: 30px;
   font-style: normal;
@@ -1098,17 +1265,39 @@ a {
 
 @media (max-width: 768px) {
   .personal {
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   .img1 span {
-    margin-left: 0;
+    margin-right: 30px;
   }
-  .personal p {
-    font-size: 0.1rem;
+  .personal2 p {
+    font-size: 0.7rem !important;
   }
   .about-players {
     margin-top: 50px;
+  }
+
+  .my-btn1{
+    font-size: 0.8rem;
+    width: 130px !important;
+    height: 40px !important;
+  }
+
+  .my-btn2{
+    font-size: 0.8rem;
+    width: 130px !important;
+    height: 40px !important;
+  }
+
+  .my-btn{
+    padding-bottom: 20px !important;
+  }
+
+  .personal2 h4{
+    margin: 0 !important;
   }
 }
 
@@ -1117,8 +1306,10 @@ a {
 }
 
 .img1 {
+  margin-top: 0 !important;
   display: flex;
   align-items: center;
+  /* justify-content: center; */
   margin-left: 40px;
 }
 
@@ -1130,12 +1321,6 @@ a {
   margin-top: 29px;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  /* .about-players{
-    display: grid;
-    gap: 200px !important;
-  } */
-}
 
 .personal2 h4 {
   margin-top: 52px;
@@ -1149,7 +1334,7 @@ a {
 
 .personal2 p {
   color: var(--color);
-  font-size: 18px;
+  font-size: 1.2rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -1157,7 +1342,7 @@ a {
 .my-btn {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 .my-btn1 {
@@ -1166,6 +1351,7 @@ a {
   color: var(--btn3);
   background: transparent;
   margin-right: 10px;
+  /* font-size: 0.5rem; */
   border: none;
   border: 1px solid var(--btn3);
 }
@@ -1469,6 +1655,7 @@ a {
 @media (max-width: 768px) {
   .all-competition {
     grid-template-columns: ifr;
+    margin-top: 30px;
   }
   .comp-grid {
     display: grid;
@@ -1480,7 +1667,14 @@ a {
     display: flex;
     flex-direction: column;
   }
+    .comp-wrap img{
+      margin-right: 15px;
+    }
 
+    .comp-wrap h4{
+      margin-left: 15px;
+    }
+  
   .comp-para {
     text-align: none;
   }
